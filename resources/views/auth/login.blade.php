@@ -12,18 +12,18 @@
         <!-- Email Address -->
         <div class="form-group">
             <label for="email" class="form-label">Email</label>
-            <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username" placeholder="name@example.com">
+            <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" autofocus autocomplete="username" placeholder="name@example.com">
             @error('email')
-                <span class="text-danger" style="display: block; margin-top: 0.25rem; font-size: 0.875rem;">{{ $message }}</span>
+                <span class="text-danger" style="display: block; margin-top: 0.25rem; font-size: 0.875rem; color:red">{{ $message }}</span>
             @enderror
         </div>
 
         <!-- Password -->
         <div class="form-group">
             <label for="password" class="form-label">Password</label>
-            <input id="password" class="form-control" type="password" name="password" required autocomplete="current-password" placeholder="••••••••">
+            <input id="password" class="form-control" type="password" name="password" autocomplete="current-password" placeholder="">
             @error('password')
-                <span class="text-danger" style="display: block; margin-top: 0.25rem; font-size: 0.875rem;">{{ $message }}</span>
+                <span class="text-danger" style="display: block; margin-top: 0.25rem; font-size: 0.875rem;color:red">{{ $message }}</span>
             @enderror
         </div>
 
