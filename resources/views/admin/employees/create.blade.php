@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6 form-group">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" value="{{ old('username') }}" required>
+                <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" value="{{ old('username') }}">
                 @error('username')
                     <span class="text-danger" style="font-size: 0.875rem;">{{ $message }}</span>
                 @enderror
@@ -20,7 +20,7 @@
             
             <div class="col-md-6 form-group">
                 <label for="first_name" class="form-label">First name</label>
-                <input type="text" class="form-control @error('first_name') is-invalid @enderror" id="first_name" name="first_name" value="{{ old('first_name') }}" required>
+                <input type="text" class="form-control @error('first_name') is-invalid @enderror" id="first_name" name="first_name" value="{{ old('first_name') }}">
                 @error('first_name')
                     <span class="text-danger" style="font-size: 0.875rem;">{{ $message }}</span>
                 @enderror
@@ -28,7 +28,7 @@
             
             <div class="col-md-6 form-group">
                 <label for="last_name" class="form-label">Last name</label>
-                <input type="text" class="form-control @error('last_name') is-invalid @enderror" id="last_name" name="last_name" value="{{ old('last_name') }}" required>
+                <input type="text" class="form-control @error('last_name') is-invalid @enderror" id="last_name" name="last_name" value="{{ old('last_name') }}" >
                 @error('last_name')
                     <span class="text-danger" style="font-size: 0.875rem;">{{ $message }}</span>
                 @enderror
@@ -36,7 +36,7 @@
             
             <div class="col-md-6 form-group">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" >
                 @error('email')
                     <span class="text-danger" style="font-size: 0.875rem;">{{ $message }}</span>
                 @enderror
@@ -81,7 +81,7 @@
             
             <div class="col-md-6 form-group">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" required>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
                 @error('password')
                     <span class="text-danger" style="font-size: 0.875rem;">{{ $message }}</span>
                 @enderror
@@ -89,12 +89,12 @@
             
             <div class="col-md-6 form-group">
                 <label for="password_confirmation" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" >
             </div>
             
              <div class="col-md-6 form-group">
                 <label for="status" class="form-label">Status</label>
-                <select class="form-select @error('status') is-invalid @enderror" id="status" name="status" required>
+                <select class="form-select @error('status') is-invalid @enderror" id="status" name="status">
                     <option value="active" {{ old('status') == 'active' ? 'selected' : '' }}>Active</option>
                     <option value="inactive" {{ old('status') == 'inactive' ? 'selected' : '' }}>Inactive</option>
                     <option value="terminated" {{ old('status') == 'terminated' ? 'selected' : '' }}>Terminated</option>

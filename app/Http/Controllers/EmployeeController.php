@@ -42,7 +42,7 @@ class EmployeeController extends Controller
             'password' => 'required|string|min:8|confirmed',
             'department_id' => 'nullable|exists:departments,id',
             'salary' => 'nullable|numeric',
-            'contact_no'=>'nullable|numeric|digits:10',
+            'contact_no'=>'required|numeric|digits:10',
             'birthday' => 'nullable|date',
             'experience_years' => 'nullable|integer',
             'status' => 'required|in:active,inactive,terminated',

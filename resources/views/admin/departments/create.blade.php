@@ -11,7 +11,7 @@
         
         <div class="form-group">
             <label for="name" class="form-label">Department Name</label>
-            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
             @error('name')
                 <span class="text-danger" style="font-size: 0.875rem;">{{ $message }}</span>
             @enderror

@@ -13,7 +13,7 @@
             <div class="col-md-6 form-group">
                 <label for="employee_id" class="form-label">Employee</label>
                 @if(Auth::user()->isAdmin())
-                <select class="form-select @error('employee_id') is-invalid @enderror" id="employee_id" name="employee_id" required>
+                <select class="form-select @error('employee_id') is-invalid @enderror" id="employee_id" name="employee_id">
                     <option value="">Select Employee</option>
                     @foreach($employees as $employee)
                         <option value="{{ $employee->id }}" {{ old('employee_id') == $employee->id ? 'selected' : '' }}>{{ $employee->full_name }}</option>
