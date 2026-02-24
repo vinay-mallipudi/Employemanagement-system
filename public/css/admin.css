@@ -42,6 +42,33 @@ body {
     background-color: var(--bg-body);
     color: var(--text-primary);
     margin: 0;
+    overflow-x: hidden;
+    /* Prevent unwanted horizontal scroll */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
 }
 
 /* Sidebar */
@@ -53,8 +80,10 @@ body {
     left: 0;
     background-color: var(--secondary-color);
     color: var(--text-white);
-    z-index: 1000;
-    transition: transform 0.3s ease;
+    z-index: 1050;
+    /* Above header */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-header {
@@ -76,9 +105,15 @@ body {
 }
 
 .sidebar-menu {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     overflow-y: auto;
     height: calc(100vh - var(--header-height));
+    scrollbar-width: none;
+    /* Hide scrollbar for sidebar but keep functionality */
+}
+
+.sidebar-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .menu-label {
@@ -123,6 +158,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    transition: margin 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Header */
@@ -176,7 +212,7 @@ body {
 /* Dashboard Stats Cards */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2.5rem;
 }
@@ -280,6 +316,18 @@ body {
     padding: 1rem;
     border-bottom: 1px solid var(--border-light);
     color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.table-container::-webkit-scrollbar {
+    height: 4px;
 }
 
 .btn-primary {
@@ -352,7 +400,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
     .sidebar {
         transform: translateX(-100%);
     }
@@ -364,4 +412,28 @@ body {
     .main-content {
         margin-left: 0;
     }
+
+    .top-header {
+        padding: 0 1rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Overlay for mobile sidebar */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    display: none;
+}
+
+.sidebar-overlay.active {
+    display: block;
 }

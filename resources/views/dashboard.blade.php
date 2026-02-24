@@ -159,11 +159,11 @@
 
 
 {{-- ================= RECENT TABLES ================= --}}
-<div class="row" style="gap: 2rem; margin: 0;">
+<div class="row g-4">
 
     {{-- Recent Attendance --}}
-    <div class="col-md-6" style="flex: 1; min-width: 300px; padding: 0;">
-        <div class="card" style="height: 100%;">
+    <div class="col-lg-6">
+        <div class="card h-100">
             <h3 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700;">
                 Recent Attendance
             </h3>
@@ -215,8 +215,8 @@
     </div>
 
     {{-- Recent Leave Requests --}}
-    <div class="col-md-6" style="flex: 1; min-width: 300px; padding: 0;">
-        <div class="card" style="height: 100%;">
+    <div class="col-lg-6">
+        <div class="card h-100">
             <h3 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700;">
                 Recent Leave Requests
             </h3>

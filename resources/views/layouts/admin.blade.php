@@ -23,6 +23,8 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar-header">
@@ -133,6 +135,7 @@
             #menu-toggle { display: block !important; }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/admin.js') }}"></script>
     @stack('scripts')
 </body>
