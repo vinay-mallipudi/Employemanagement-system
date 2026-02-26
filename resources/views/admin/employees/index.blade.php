@@ -31,7 +31,7 @@
                             </div>
                             <div>
                                 <div style="font-weight: 600;">{{ $employee->full_name }}</div>
-                                <div style="font-size: 0.75rem; color: #6b7280;">{{ $employee->user->email }}</div>
+                                <div style="font-size: 0.75rem; color: #6b7280;">{{ $employee->user->email ?? null }}</div>
                             </div>
                         </div>
                     </td>
